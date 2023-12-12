@@ -34,7 +34,7 @@ export default {
       >
         <v-col v-for="challenge in items" :key="challenge">
           <v-sheet class="pa-2 ma-2">
-            <ChallengeCard class="card" :title="challenge.title" :description="challenge.description" :Level="challenge.Level" :imageURL="challenge.imageURL" :number="challenge.number"/>
+            <ChallengeCard class="card" :title="challenge.title" :description="challenge.description" :Level="challenge.Level" :imageURL="challenge.imageURL" :number="challenge.number" :hint="challenge.hint" :writeUp="challenge.writeUp"/>
           </v-sheet>
         </v-col>
       </v-row>

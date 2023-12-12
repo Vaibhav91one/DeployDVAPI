@@ -49,8 +49,7 @@
                                         <v-dialog v-model="dialogHint" activator="parent" width="auto">
                                             <v-card>
                                                 <v-card-text>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua.
+                                                    {{ hint }}
                                                 </v-card-text>
                                             </v-card>
                                         </v-dialog>
@@ -67,12 +66,8 @@
                                         <v-dialog v-model="dialogWriteUp" activator="parent" width="auto">
                                             <v-card>
                                                 <v-card-text>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua.
+                                                    {{ writeUp }}
                                                 </v-card-text>
-                                                <!-- <v-card-actions>
-                                                <v-btn color="primary" block @click="dialogWriteUp = false">Close Dialog</v-btn>
-                                            </v-card-actions> -->
                                             </v-card>
                                         </v-dialog>
                                     </v-btn>
@@ -104,7 +99,7 @@
 </template>
 <script>
 export default {
-    props: ['title', 'description', 'Level', 'imageURL', 'number'],
+    props: ['title', 'description', 'Level', 'imageURL', 'number', 'hint', 'writeUp'],
     data: () => ({
         show: false,
         dialog: false,
