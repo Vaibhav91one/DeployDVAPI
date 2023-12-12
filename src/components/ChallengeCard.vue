@@ -1,7 +1,7 @@
 <template>
     <div style="border-radius: 5px;">
         <v-card class="mx-auto" max-width="600"
-            :style="{ backgroundColor: this.isInputMatching == null ? 'white' : (this.isInputMatching ? 'green' : 'red') }">
+            :style="{ backgroundColor: this.isInputMatching == null ? 'white' : (this.isInputMatching ? '#2EFF8AFF' : '#FF4C20FF') }">
             <v-img :src=imageURL height="200px" cover></v-img>
 
             <v-card-title>

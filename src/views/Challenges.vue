@@ -20,35 +20,27 @@ export default {
 </script>
 
 <template>
-  <div >
     <v-container
-      class="mb-6"
-      
+    class="container"
     >
     
       <v-row
         align="start"
         no-gutters
-        class="three-cols"
+        style="display: flex; justify-content: center; align-items: center;"
         
       >
         <v-col v-for="challenge in items" :key="challenge">
           <v-sheet class="pa-2 ma-2">
-            <ChallengeCard class="card" :title="challenge.title" :description="challenge.description" :Level="challenge.Level" :imageURL="challenge.imageURL" :number="challenge.number" :hint="challenge.hint" :writeUp="challenge.writeUp"/>
+            <ChallengeCard style="max-width:350px;" class="card" :title="challenge.title" :description="challenge.description" :Level="challenge.Level" :imageURL="challenge.imageURL" :number="challenge.number" :hint="challenge.hint" :writeUp="challenge.writeUp"/>
           </v-sheet>
         </v-col>
       </v-row>
 
     </v-container>
-  </div>
 </template>
 
 <style>
-.three-cols {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* display: flex; */
-}
 
 .card{
   transition: .2s ease-in-out;
@@ -58,4 +50,5 @@ export default {
 .card:hover{
   box-shadow: 3px 3px 19px 2px rgba(0,0,0,.5);
 }
+
 </style>
