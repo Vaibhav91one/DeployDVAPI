@@ -1,6 +1,6 @@
 <template>
     <div style="border-radius: 5px;">
-        <v-card class="mx-auto" max-width="500"
+        <v-card class="mx-auto" max-width="600"
             :style="{ backgroundColor: this.isInputMatching == null ? 'white' : (this.isInputMatching ? 'green' : 'red') }">
             <v-img :src=imageURL height="200px" cover></v-img>
 
@@ -8,8 +8,8 @@
                 {{ title }}
             </v-card-title>
 
-            <v-card-subtitle>
-                <span :style="{ color: Level === 'Easy' ? 'green' : (Level === 'Moderate' ? 'yellow' : 'red') }"> {{ Level
+            <v-card-subtitle style="font-weight: 800; ">
+                <span :style="{ color: Level === 'Easy' ? 'green' : (Level === 'Moderate' ? 'Orange' : 'red') }"> {{ Level
                 }}
                 </span>
 
@@ -36,7 +36,7 @@
                                                 {{ description }}
                                             </v-card-text>
                                             <v-col cols="12">
-                                                <v-text-field v-model="userInput" label="{Flag}" :style="{ color: this.isInputMatching == null ? 'black' : (this.isInputMatching ? 'green' : 'red') }" 
+                                                <v-text-field v-model="userInput" label="FLAG{XXXXXXXX}" :style="{ color: this.isInputMatching == null ? 'black' : (this.isInputMatching ? 'green' : 'red') }" 
                                                     hint="Make sure you have gotten the right one!"></v-text-field>
                                             </v-col>
                                         </v-row>
@@ -66,7 +66,7 @@
                                         <v-dialog v-model="dialogWriteUp" activator="parent" width="auto">
                                             <v-card>
                                                 <v-card-text>
-                                                    {{ writeUp }}
+                                                    <pre> {{ writeUp }} </pre>
                                                 </v-card-text>
                                             </v-card>
                                         </v-dialog>

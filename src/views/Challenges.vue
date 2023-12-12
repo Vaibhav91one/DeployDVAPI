@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div style="width: 100%;">
+  <div >
     <v-container
       class="mb-6"
       
@@ -30,7 +30,7 @@ export default {
         align="start"
         no-gutters
         class="three-cols"
-        style="height: 150px;"
+        
       >
         <v-col v-for="challenge in items" :key="challenge">
           <v-sheet class="pa-2 ma-2">
@@ -45,9 +45,9 @@ export default {
 
 <style>
 .three-cols {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* display: flex; */
 }
 
 .card{
